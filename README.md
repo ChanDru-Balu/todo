@@ -1,3 +1,7 @@
+# simple todo list without status or edit options
+
+Add and show the list as now added
+
 # TodoOne
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.2.
