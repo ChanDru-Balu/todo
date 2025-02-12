@@ -2,11 +2,12 @@
 
 <div>
     <input type="string" [(ngModel)]="currentTodo" />
-    <button (click)="addTodo()">Add Todo</button>
+    <button *ngIf="!updateTodoEnable" (click)="addTodo()">Add Todo</button>
+    <button *ngIf="updateTodoEnable" (click)="updateTodo()">Update Todo</button>
 </div>
 
 <div class="list-of-todo">
-    <div *ngFor="let todo of todoList" >
-        {{todo}}
+    <div *ngFor="let todo of todoList;let i=index;" (click)="clickTodo(todo)" >
+        {{i+1}}.{{todo.task}}
     </div>
 </div>

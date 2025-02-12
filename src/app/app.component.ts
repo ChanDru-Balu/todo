@@ -15,13 +15,38 @@ import { FormsModule } from '@angular/forms';
 })
 export class AppComponent {
 
-  currentTodo : string = '';
-  todoList : any[] = [];
+
+  currentTodo: string = '';
+  todoList: any[] = [];
+  currentTodoId: number = 0;
+  updateTodoEnable: boolean = false ;
 
 
   addTodo(): void {
-    console.log('Current Todo:',this.currentTodo);
-    this.todoList.push(this.currentTodo)
+    console.log('Current Todo:', this.currentTodo);
+    let todoObj = {
+      id: new Date().getTime(),
+      task: this.currentTodo,
+      date: new Date(),
+      status: "pending"
+    }
+    this.todoList.push(todoObj)
+  }
+
+  updateTodo() {
+    console.log("currenttodoId:",this.currentTodoId);
+    this.todoList.forEach((todo:any)=>{
+      if(todo.id == this.currentTodoId){
+        todo.task = this.currentTodo;
+      }
+    })
+  }
+
+  clickTodo(todo:any): void{
+    console.log({todo});
+    this.currentTodo = todo.task ;
+    this.currentTodoId = todo.id ;
+    this.updateTodoEnable = true;
   }
 
 }
