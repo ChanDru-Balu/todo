@@ -1,0 +1,15 @@
+
+
+
+.compponents-list{
+   
+    margin: 10px;
+
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    
+    a{
+        text-decoration: underline;
+    }
+}

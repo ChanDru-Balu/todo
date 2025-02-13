@@ -1,8 +1,11 @@
 <h1 style="text-align: center;">Todo List</h1>
 
-<div routerLink="/simple" >
-    Simple Todo
+<div class="compponents-list" >
+    <a *ngFor="let comp of componentsList" style="text-decoration: underline;" routerLink="/simple" >
+        Simple Todo
+    </a>
 </div>
+
 
 <router-outlet></router-outlet>
 
