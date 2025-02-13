@@ -14,4 +14,5 @@
 14-02-2025
 1. New component added 
 2. Changes for the simple todo move to that component
-3. UI changes  
+3. UI changes
+4. Dynamic component list  

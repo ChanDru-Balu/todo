@@ -17,8 +17,7 @@ import { RouterModule, RouterOutlet } from '@angular/router'; // if we hide this
 export class AppComponent {
 
   componentsList : any[] = [
-    {name: 'simple' , tilte: 'Simple' , link: 'simple' },
-    {name: 'simpleModel' , tilte: 'Simple Model' , link: 'simple-model' },
+    {name: 'simple' , title: 'Simple Todo' , link: 'simple' }
   ]
 
 }

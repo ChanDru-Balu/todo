@@ -1,8 +1,8 @@
 <h1 style="text-align: center;">Todo List</h1>
 
 <div class="compponents-list" >
-    <a *ngFor="let comp of componentsList" style="text-decoration: underline;" routerLink="/simple" >
-        Simple Todo
+    <a *ngFor="let comp of componentsList"  [routerLink]='comp.link' >
+        {{comp.title}}
     </a>
 </div>
 
