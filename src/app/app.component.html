@@ -1,16 +1,8 @@
 <h1 style="text-align: center;">Todo List</h1>
 
-<div>
-    <input type="string" [(ngModel)]="currentTodo" />
-    <button *ngIf="!updateTodoEnable" (click)="addTodo()">Add Todo</button>
-    <button *ngIf="updateTodoEnable" (click)="updateTodo()">Update Todo</button>
+<div routerLink="/simple" >
+    Simple Todo
 </div>
 
-<div class="list-of-todo">
-    <div *ngFor="let todo of todoList;let i=index;" >
-        <div>
-            <input type="checkbox" [checked]="todo.status == 'completed'"  (change)="checkTodo(todo)" >
-            <span [ngStyle]="{ 'text-decoration' : todo.status == 'completed' ? 'line-through' : '' }" (click)="clickTodo(todo)">{{i+1}}.{{todo.task}}</span>
-        </div>
-    </div>
-</div>
+<router-outlet></router-outlet>
+

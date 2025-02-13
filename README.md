@@ -11,3 +11,6 @@
 2. Add checkbox to the todo while click that the status will changed to completed,
 3. then the task title will be striked out for the completed todo ,
 
+14-02-2025
+1. New component added 
+2. Changes for the simple todo move to that component  
