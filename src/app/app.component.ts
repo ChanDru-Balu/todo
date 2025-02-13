@@ -1,12 +1,23 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { RouterModule, RouterOutlet } from '@angular/router'; // if we hide this becuase we don't have routing in this branch
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [
+    RouterOutlet,
+    RouterModule,
+    FormsModule,
+    CommonModule
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'todo-one';
+
+  componentsList : any[] = [
+    {name: 'simple' , title: 'Simple Todo' , link: 'simple' }
+  ]
+
 }

@@ -1,61 +1,19 @@
-# todo
-For the todo from zero to hero
-# TodoOne
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.2.
+## TODO
 
-## Development server
+# simple todo list in Single component
 
-To start a local development server, run:
+12-02-2025
+1. add edit option for the added todo
 
-```bash
-ng serve
-```
+13-02-2025
+1. Clear the caches of the todos in input while add todo , 
+    clear the caches of the todo enable boolean , todo text , todo id while edit
+2. Add checkbox to the todo while click that the status will changed to completed,
+3. then the task title will be striked out for the completed todo ,
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+14-02-2025
+1. New component added 
+2. Changes for the simple todo move to that component
+3. UI changes
+4. Dynamic component list  
