@@ -31,6 +31,7 @@ export class AppComponent {
       status: "pending"
     }
     this.todoList.push(todoObj)
+    this.currentTodo = '';
   }
 
   updateTodo() {
@@ -38,6 +39,9 @@ export class AppComponent {
     this.todoList.forEach((todo:any)=>{
       if(todo.id == this.currentTodoId){
         todo.task = this.currentTodo;
+        this.updateTodoEnable = false ;
+        this.currentTodo = '';
+        this.currentTodoId = 0;
       }
     })
   }
