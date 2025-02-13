@@ -21,21 +21,24 @@ export class AppComponent {
   currentTodoId: number = 0;
   updateTodoEnable: boolean = false ;
 
-
-  addTodo(): void {
-    console.log('Current Todo:', this.currentTodo);
+/**
+ *Add the todo from the input
+ *
+ * @memberof AppComponent
+ */
+addTodo(): void {
     let todoObj = {
       id: new Date().getTime(),
       task: this.currentTodo,
       date: new Date(),
-      status: "pending"
+      status: "pending",
+      isCompleted: true
     }
     this.todoList.push(todoObj)
     this.currentTodo = '';
   }
 
   updateTodo() {
-    console.log("currenttodoId:",this.currentTodoId);
     this.todoList.forEach((todo:any)=>{
       if(todo.id == this.currentTodoId){
         todo.task = this.currentTodo;
@@ -47,10 +50,17 @@ export class AppComponent {
   }
 
   clickTodo(todo:any): void{
-    console.log({todo});
     this.currentTodo = todo.task ;
     this.currentTodoId = todo.id ;
     this.updateTodoEnable = true;
+  }
+
+  checkTodo(todo:any): void {
+    if(todo.status == 'pending'){
+      todo.status = 'completed';
+    } else {
+      todo.status = 'pending';
+    }
   }
 
 }
