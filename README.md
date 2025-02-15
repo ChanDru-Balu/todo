@@ -17,3 +17,7 @@
 2. Changes for the simple todo move to that component
 3. UI changes
 4. Dynamic component list  
+
+15-02-2025
+1. Build and deployed in gh-pages
+2. npm package added - angular-cli-ghpages 
