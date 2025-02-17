@@ -21,3 +21,22 @@
 15-02-2025
 1. Build and deployed in gh-pages
 2. npm package added - angular-cli-ghpages 
+
+16-02-2025:
+1. ng build --output-path=dist/todo-one --base-href "/todo/"
+2. npx angular-cli-ghpages --dir=dist/todo-one/browser
+
+17-02-2025: Docker changes:
+1. Dockerfile - before build do ng build
+2. build as docker : docker build -t todo-app .
+3. run from docker : docker run -p 8080:80 todo-app
+4. The above 3rd command will be run the image in https://localhost:8080
+5. Build the Docker Image - docker build -t todo-app .
+6. Save the Image as a Tar File - docker save -o todo-app.tar todo-app
+7. the above command will be create the docker image file with .tar extension 
+8. we can share the .tar file to another systme with docker
+9. Load the Image on the Other System - docker load -i todo-app.tar
+10. Verify the Image on the New System - docker images
+11. Run the Container on the Other System - docker run -p 8080:80 todo-app
+
+
