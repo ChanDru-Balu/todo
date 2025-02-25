@@ -39,4 +39,7 @@
 10. Verify the Image on the New System - docker images
 11. Run the Container on the Other System - docker run -p 8080:80 todo-app
 
-
+25-02-2025 Git Merge commands: 
+1. git checkout main
+2. git merge your-branch
+3. git push origin main
