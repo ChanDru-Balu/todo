@@ -22,7 +22,7 @@
 1. Build and deployed in gh-pages
 2. npm package added - angular-cli-ghpages 
 
-16-02-2025:
+16-02-2025: (Put into live with ghpages)
 1. ng build --output-path=dist/todo-one --base-href "/todo/"
 2. npx angular-cli-ghpages --dir=dist/todo-one/browser
 
@@ -52,7 +52,7 @@
 1. Built in control flow characters integrated
     1. @if , @else
     2. @for
-2. For the ng-build find the method to push into the gh-pages
+2. For the ng-build find the method to push into the gh-pages (sometimes unnecessary , useful only 16-02-2025 failed)
     On Angular 17, you could just run ng build because by default, the ng build command uses the production configuration
 
     That would generate dist/[projectname]/browser which i noticed contains all the assets for the project. So what I did was
@@ -68,3 +68,14 @@
         5. you'll land on index of, refresh the page and it should show up
 
         Edit: You can keep the /, just cd to dist/[projectname]/browser
+
+3. Deferable Changes added :
+    For :
+    Optimized Performance: The list won't be rendered until necessary.
+    Improved UX: Provides loading and empty state handling.
+    Reduces Initial Load Time: Helps avoid rendering an empty list.
+    
+    Key Characteristics are:
+    1. @defer(when...){}
+    2. @loading(){}
+    3. @placeholder(){}

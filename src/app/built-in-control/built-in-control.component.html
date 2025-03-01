@@ -8,15 +8,22 @@
 </div>
 
 
-<div class="list-of-todo">
+@defer(when todoList.length > 0){
+    <div class="list-of-todo">
 
-    @for (todo of todoList;track todo;let i=$index){
-        <div>
+        @for (todo of todoList;track todo;let i=$index){
+            <div>
+    
+                <input type="checkbox" [checked]="todo.status == 'completed'"  (change)="checkTodo(todo)" >
+    
+                <span [ngStyle]="{ 'text-decoration' : todo.status == 'completed' ? 'line-through' : '' }" (click)="clickTodo(todo)">{{i+1}}.{{todo.task}}</span>
+            </div>
+        }
+    
+    </div>
+} @loading {
+    <p>Loading your tasks...</p>
+} @placeholder {
+    <p>Not yet added a todo to show!</p>
+}
 
-            <input type="checkbox" [checked]="todo.status == 'completed'"  (change)="checkTodo(todo)" >
-
-            <span [ngStyle]="{ 'text-decoration' : todo.status == 'completed' ? 'line-through' : '' }" (click)="clickTodo(todo)">{{i+1}}.{{todo.task}}</span>
-        </div>
-    }
-
-</div>
