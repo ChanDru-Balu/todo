@@ -1,1 +1,22 @@
-<p>built-in-control works!</p>
+<div>
+    <input type="string" [(ngModel)]="currentTodo" />
+    @if(updateTodoEnable){
+        <button (click)="updateTodo()">Update Todo</button>
+    } @else {
+        <button (click)="addTodo()" >Add Todo</button>
+    }
+</div>
+
+
+<div class="list-of-todo">
+
+    @for (todo of todoList;track todo;let i=$index){
+        <div>
+
+            <input type="checkbox" [checked]="todo.status == 'completed'"  (change)="checkTodo(todo)" >
+
+            <span [ngStyle]="{ 'text-decoration' : todo.status == 'completed' ? 'line-through' : '' }" (click)="clickTodo(todo)">{{i+1}}.{{todo.task}}</span>
+        </div>
+    }
+
+</div>

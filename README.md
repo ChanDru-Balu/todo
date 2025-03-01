@@ -47,3 +47,24 @@
 25-02-2025 Built-in-control-flow :
 1. built-in-control-flow component created
 2. component added into the routing from homes
+
+01-03-2025:
+1. Built in control flow characters integrated
+    1. @if , @else
+    2. @for
+2. For the ng-build find the method to push into the gh-pages
+    On Angular 17, you could just run ng build because by default, the ng build command uses the production configuration
+
+    That would generate dist/[projectname]/browser which i noticed contains all the assets for the project. So what I did was
+
+        1. Before ng build, on index.html modify < base href="/" > and remove the /
+
+        2. Run ng build
+
+        3. Move the contents of dist/[projectname]/browser to dist/[projectname]
+
+        4. cd dist/[projectname] and run http-server -p [portnumber]
+
+        5. you'll land on index of, refresh the page and it should show up
+
+        Edit: You can keep the /, just cd to dist/[projectname]/browser
