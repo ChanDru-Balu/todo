@@ -79,3 +79,8 @@
     1. @defer(when...){}
     2. @loading(){}
     3. @placeholder(){}
+
+
+03-02-2025 :
+1. Angular signal - new changes
+2. Interface and Enum
