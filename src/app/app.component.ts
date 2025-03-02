@@ -18,7 +18,8 @@ export class AppComponent {
 
   componentsList : any[] = [
     {name: 'simple' , title: 'Simple Todo' , link: 'simple' },
-    {name: 'built-in', title: 'Built in Control' , link: 'built-in'}
+    {name: 'built-in', title: 'Built in Control' , link: 'built-in'},
+    {name: 'forms', title: 'Forms Services' , link: 'forms-services'},
   ]
 
 }
