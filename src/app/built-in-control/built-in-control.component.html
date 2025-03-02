@@ -1,6 +1,6 @@
 <div>
-    <input type="string" [value]="currentTodo()" (input)="setCurrentTodo($event)" />
-    @if(updateTodoEnable()){
+    <input type="string" [(ngModel)]="currentTodo" />
+    @if(updateTodoEnable){
         <button (click)="updateTodo()">Update Todo</button>
     } @else {
         <button (click)="addTodo()" >Add Todo</button>
@@ -8,10 +8,10 @@
 </div>
 
 
-@defer(when todoList().length > 0){
+@defer(when todoList.length > 0){
     <div class="list-of-todo">
 
-        @for (todo of todoList();track todo;let i=$index){
+        @for (todo of todoList;track todo;let i=$index){
             <div>
     
                 <input type="checkbox" [checked]="todo.status == 'completed'"  (change)="checkTodo(todo)" >
