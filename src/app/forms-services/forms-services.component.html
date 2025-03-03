@@ -1,5 +1,5 @@
-<div>
-    <input type="string" [(ngModel)]="currentTodo" />
+<div [formGroup]="todoForm">
+    <input type="string" formControlName="task" />
     @if(updateTodoEnable){
         <button (click)="updateTodo()">Update Todo</button>
     } @else {
