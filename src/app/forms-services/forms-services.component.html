@@ -1,5 +1,5 @@
 <div [formGroup]="todoForm">
-    <input type="string" formControlName="task" />
+    <input type="string" formControlName="task"  (keyup.enter)="addTodo()"/>
     @if(updateTodoEnable){
         <button (click)="updateTodo()">Update Todo</button>
     } @else {

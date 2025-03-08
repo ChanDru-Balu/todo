@@ -1,5 +1,5 @@
 <div>
-    <input type="string" [(ngModel)]="currentTodo" />
+    <input type="string" [(ngModel)]="currentTodo" (keyup.enter)="addTodo()" />
     <button *ngIf="!updateTodoEnable" (click)="addTodo()">Add Todo</button>
     <button *ngIf="updateTodoEnable" (click)="updateTodo()">Update Todo</button>
 </div>

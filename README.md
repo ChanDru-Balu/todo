@@ -94,3 +94,8 @@ New branch is created for the Forms , Services and Subjects in it
 03-03-2025:
 
 1. Added form options for the component
+
+
+08-03-2025:
+
+1. Added event listenerts for the enter button from inputs

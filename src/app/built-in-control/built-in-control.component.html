@@ -1,5 +1,5 @@
 <div>
-    <input type="string" [value]="currentTodo()" (input)="setCurrentTodo($event)" />
+    <input type="string" [value]="currentTodo()" (input)="setCurrentTodo($event)" (keyup.enter)="addTodo()" />
     @if(updateTodoEnable()){
         <button (click)="updateTodo()">Update Todo</button>
     } @else {
